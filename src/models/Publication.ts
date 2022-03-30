@@ -19,6 +19,9 @@ import { User } from "./User";
     @Column({ length: 480 })
     description: string;
 
+    @Column({ length: 480, nullable: true })
+    image: string;
+
     @ManyToOne(() => User, (user) => user.publications)
     user: User;
 
